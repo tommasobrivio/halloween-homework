@@ -14,7 +14,7 @@
                title="Byloth's Website">Byloth</a>.
         </p>
         <p>
-            <small>Copywrong (c) 2024 “<b>Tuemplate</b>”. All the wrong reserved.</small>
+            <small>Copywrong ©️ 2024 “<b>Halloween Homework</b>”. All the wrongs reserved.</small>
         </p>
     </footer>
 </template>

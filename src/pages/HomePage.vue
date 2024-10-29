@@ -81,11 +81,11 @@
 </script>
 
 <template>
-    <div id="home-page">
+    <div id="home-page" class="page">
         <header>
             <VueLogo />
         </header>
-        <h1>Your Tuemplate is up and running! 🚀</h1>
+        <h1>Your Halloween Homework are ready to be done! 🚀</h1>
         <div>
             <AppButton theme="success" @click="emitSuccess">
                 Success
@@ -110,13 +110,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: 100svh;
+        min-height: 100dvh;
         padding-top: var(--navigation-bar-height);
         text-align: center;
 
         .btn
         {
-            margin: 0.5rem;
+            margin: 0.5em;
         }
     }
 </style>

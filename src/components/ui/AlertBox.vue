@@ -69,7 +69,7 @@
             filter: none;
             font-size: 1.5rem;
             justify-content: center;
-            padding: 1rem;
+            padding: 0.75em;
         }
         & > .fa-solid
         {

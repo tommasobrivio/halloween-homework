@@ -1,6 +1,6 @@
-# Byloth's Tuemplate
+# Halloween Homework
 
-A Vue.js 3 template app based on Vite with TypeScript, Pinia, Vue Router and more.
+🎃🦇🐈‍⬛🕷️🕸️👻
 
 ## Customize configuration
 

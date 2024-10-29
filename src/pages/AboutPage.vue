@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-    <div id="about-page" class="container">
+    <div id="about-page" class="container page">
         <h1>About this website...</h1>
         <strong>This website was made by using:</strong>
         <ul>
@@ -73,6 +73,6 @@
     #about-page
     {
         margin-top: var(--navigation-bar-height);
-        padding-top: 1rem;
+        padding-top: 1em;
     }
 </style>

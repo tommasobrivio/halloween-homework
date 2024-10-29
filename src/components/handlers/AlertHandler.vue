@@ -59,7 +59,7 @@
         bottom: 0px;
         left: 0px;
         margin-top: var(--navigation-bar-height);
-        padding-top: 1rem;
+        padding-top: 1em;
         pointer-events: none;
         position: fixed;
         right: 0px;

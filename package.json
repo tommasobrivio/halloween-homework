@@ -1,28 +1,6 @@
 {
-  "name": "@byloth/tuemplate",
-  "version": "1.2.3",
-  "description": "A Vue.js 3 template app based on Vite with TypeScript, Pinia, Vue Router and more.",
-  "keywords": [
-    "Vue.js",
-    "Template",
-    "Vite.js",
-    "TypeScript",
-    "Pinia",
-    "Vue Router"
-  ],
-  "homepage": "https://github.com/Byloth/tuemplate#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Byloth/tuemplate.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Byloth/tuemplate/issues"
-  },
-  "author": {
-    "name": "Matteo Bilotta",
-    "email": "me@byloth.dev",
-    "url": "https://www.byloth.dev/"
-  },
+  "name": "@bylothink/halloween-homework",
+  "version": "1.0.0",
   "license": "Apache-2.0",
   "type": "module",
   "scripts": {

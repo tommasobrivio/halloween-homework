@@ -1,3 +1,5 @@
+@use "sass:string";
+
 /*
  * Colors:
  */
@@ -21,7 +23,7 @@ $danger: #DC3545;
 /*
  * Fonts:
  */
-$font-family: unquote("Ubuntu, Roboto, Helvetica, Arial, sans-serif");
+$font-family: string.unquote("Ubuntu, Roboto, Helvetica, Arial, sans-serif");
 
 /*
  * Sizes:
