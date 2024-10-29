@@ -23,7 +23,7 @@
     .navigation-bar
     {
         background-color: rgba(#FFF, 0.5);
-        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.25);
         backdrop-filter: blur(10px);
         position: fixed;
         top: 0px;

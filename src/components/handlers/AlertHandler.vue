@@ -17,7 +17,7 @@
     <BaseHandler v-slot="{ alert, customComponent, isOpen, queue, resolve, reject }"
                  class="alerts-handler container">
         <Transition appear
-                    name="fade"
+                    name="alert"
                     mode="out-in">
             <AlertBox v-if="alert"
                       v-show="isOpen"
@@ -88,20 +88,20 @@
                 }
             }
 
-            &.fade-enter-from,
-            &.fade-leave-to
+            &.alert-enter-from,
+            &.alert-leave-to
             {
                 opacity: 0;
                 transform: translateY(-2.5em);
             }
-            &.fade-enter-active,
-            &.fade-leave-active
+            &.alert-enter-active,
+            &.alert-leave-active
             {
                 transition: opacity variables.$transition-duration variables.$transition-timing-function,
                             transform variables.$transition-duration variables.$transition-timing-function;
             }
-            &.fade-enter-to,
-            &.fade-leave-from
+            &.alert-enter-to,
+            &.alert-leave-from
             {
                 opacity: 1;
                 transform: translateY(0px);

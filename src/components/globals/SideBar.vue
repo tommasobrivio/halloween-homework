@@ -2,8 +2,8 @@
 
 <template>
     <aside class="side-bar">
-        <RouterLink :to="{ name: 'home' }" class="btn btn-light">
-            Esercizio 1
+        <RouterLink :to="{ name: 'exercise-1' }" class="btn btn-light">
+            [Esercizio 1] Calcolatrice
         </RouterLink>
         <RouterLink :to="{ name: 'home' }" class="btn btn-light">
             Esercizio 2
@@ -25,15 +25,14 @@
 
     .side-bar
     {
-        background-color: variables.$somewhat-gray;
+        background-color: variables.$inset-gray;
         border-right: 1px solid rgba(0, 0, 0, 0.5);
-        box-shadow: inset -0.5rem 0px 0.5rem -0.5rem rgba(0, 0, 0, 0.5);
+        box-shadow: inset -0.5em 0px 0.5em -0.5em rgba(0, 0, 0, 0.5);
         padding-top: var(--navigation-bar-height);
         width: auto;
 
         .btn-light
         {
-            border-color: rgba(0, 0, 0, 0.25);
             display: block;
             margin: 0.75em;
         }
