@@ -1,0 +1,63 @@
+{
+  "name": "@byloth/tuemplate",
+  "version": "1.2.3",
+  "description": "A Vue.js 3 template app based on Vite with TypeScript, Pinia, Vue Router and more.",
+  "keywords": [
+    "Vue.js",
+    "Template",
+    "Vite.js",
+    "TypeScript",
+    "Pinia",
+    "Vue Router"
+  ],
+  "homepage": "https://github.com/Byloth/tuemplate#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Byloth/tuemplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Byloth/tuemplate/issues"
+  },
+  "author": {
+    "name": "Matteo Bilotta",
+    "email": "me@byloth.dev",
+    "url": "https://www.byloth.dev/"
+  },
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --build --force",
+    "lint": "eslint .",
+    "prepare": "husky",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@byloth/core": "2.0.0-rc.4",
+    "@byloth/exceptions": "^2.3.0",
+    "@byloth/vuert": "^1.3.4",
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@vueuse/core": "^11.1.0",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "pinia": "^2.2.5",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@byloth/eslint-config-nuxt": "^3.0.1",
+    "@eslint/compat": "^1.2.2",
+    "@types/node": "^20.17.3",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "husky": "^9.1.6",
+    "sass": "^1.80.4",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4",
+    "vue-tsc": "^2.1.8"
+  },
+  "private": true,
+  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
+}
