@@ -77,7 +77,6 @@
                 message: "Per favore, compila tutti i campi prima di effettuare il calcolo.",
                 type: "warning",
                 dismissible: true,
-                timeout: 5000,
                 actions: [{
                     label: "Ho capito",
                     type: "primary"
@@ -96,7 +95,6 @@
                 message: "Uno o entrambi i valori inseriti non sembrano essere numeri validi.",
                 type: "error",
                 dismissible: true,
-                timeout: 5000,
                 actions: [{
                     label: "Ho capito",
                     type: "primary"
@@ -104,9 +102,35 @@
             });
         }
 
-        const res = computeOperation(num1, num2, operator.value);
+        let res: number;
 
-        if (Number.isNaN(res) || !Number.isFinite(res))
+        try
+        {
+            res = computeOperation(num1, num2, operator.value);
+        }
+        catch (error)
+        {
+            // eslint-disable-next-line no-console
+            console.error(error);
+
+            return $vuert.emit({
+                icon: "circle-xmark",
+                title: "Qualcosa si è rotto male",
+                message:
+                    "Sembra tu sia riuscito a rompere male l'intera calcolatrice" +
+                    " durante il calcolo del risultato dell'operazione. Congratulazioni!\n" +
+                    "Se sei interessato a sapere quale sia l'errore specifico, controlla la console del browser (F12).",
+
+                type: "error",
+                dismissible: true,
+                actions: [{
+                    label: "Ho capito",
+                    type: "primary"
+                }]
+            });
+        }
+
+        if (!res || Number.isNaN(res) || !Number.isFinite(res))
         {
             return $vuert.emit({
                 icon: "circle-xmark",
@@ -114,7 +138,6 @@
                 message: "Il risultato dell'operazione non sembra essere un numero valido.",
                 type: "error",
                 dismissible: true,
-                timeout: 5000,
                 actions: [{
                     label: "Ho capito",
                     type: "primary"
@@ -141,7 +164,6 @@
                 message: "Per favore, compila tutti i campi prima di effettuare il calcolo.",
                 type: "warning",
                 dismissible: true,
-                timeout: 5000,
                 actions: [{
                     label: "Ho capito",
                     type: "primary"
@@ -160,7 +182,6 @@
                 message: "Uno o entrambi i valori inseriti non sembrano essere numeri validi.",
                 type: "error",
                 dismissible: true,
-                timeout: 5000,
                 actions: [{
                     label: "Ho capito",
                     type: "primary"
@@ -168,10 +189,62 @@
             });
         }
 
-        const res1 = computeOperation(num1, num2, "/");
-        const res2 = computeOperation(num1, num2, "%");
+        let res1: number;
+        let res2: number;
 
-        if (Number.isNaN(res1) || !Number.isFinite(res1))
+        try
+        {
+            res1 = computeOperation(num1, num2, "/");
+        }
+        catch (error)
+        {
+            // eslint-disable-next-line no-console
+            console.error(error);
+
+            return $vuert.emit({
+                icon: "circle-xmark",
+                title: "Qualcosa si è rotto male",
+                message:
+                    "Sembra tu sia riuscito a rompere male l'intera calcolatrice" +
+                    " durante il calcolo del quoziente della divisione. Congratulazioni!\n" +
+                    "Se sei interessato a sapere quale sia l'errore specifico, controlla la console del browser (F12).",
+
+                type: "error",
+                dismissible: true,
+                actions: [{
+                    label: "Ho capito",
+                    type: "primary"
+                }]
+            });
+        }
+
+        try
+        {
+            res2 = computeOperation(num1, num2, "%");
+        }
+        catch (error)
+        {
+            // eslint-disable-next-line no-console
+            console.error(error);
+
+            return $vuert.emit({
+                icon: "circle-xmark",
+                title: "Qualcosa si è rotto male",
+                message:
+                    "Sembra tu sia riuscito a rompere male l'intera calcolatrice" +
+                    " durante il calcolo del resto della divisione. Congratulazioni!\n" +
+                    "Se sei interessato a sapere quale sia l'errore specifico, controlla la console del browser (F12).",
+
+                type: "error",
+                dismissible: true,
+                actions: [{
+                    label: "Ho capito",
+                    type: "primary"
+                }]
+            });
+        }
+
+        if (!res1 || Number.isNaN(res1) || !Number.isFinite(res1))
         {
             return $vuert.emit({
                 icon: "circle-xmark",
@@ -179,7 +252,6 @@
                 message: "Il risultato dell'operazione di divisione non sembra essere un numero valido.",
                 type: "error",
                 dismissible: true,
-                timeout: 5000,
                 actions: [{
                     label: "Ho capito",
                     type: "primary"
@@ -187,7 +259,7 @@
             });
         }
 
-        if (Number.isNaN(res2) || !Number.isFinite(res2))
+        if (!res2 || Number.isNaN(res2) || !Number.isFinite(res2))
         {
             return $vuert.emit({
                 icon: "circle-xmark",
@@ -195,7 +267,6 @@
                 message: "Il risultato dell'operazione di modulo non sembra essere un numero valido.",
                 type: "error",
                 dismissible: true,
-                timeout: 5000,
                 actions: [{
                     label: "Ho capito",
                     type: "primary"

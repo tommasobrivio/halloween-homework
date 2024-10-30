@@ -1,104 +1,40 @@
-<script lang="ts" setup>
-    import { useVuert } from "@byloth/vuert";
-
-    import AppButton from "@/components/ui/AppButton.vue";
-    import VueLogo from "@/components/VueLogo.vue";
-
-    const $vuert = useVuert();
-
-    const emitSuccess = () => $vuert.emit({
-        icon: "circle-check",
-        title: "Success",
-        message: "This is a success message.",
-        type: "success",
-        dismissible: true,
-        timeout: 5000,
-        actions: [
-            {
-                label: "Ok",
-                type: "primary"
-            },
-            {
-                label: "Cancel",
-                type: "secondary"
-            }
-        ]
-    });
-    const emitInfo = () => $vuert.emit({
-        icon: "circle-info",
-        title: "Info",
-        message: "This is an informative message.",
-        type: "info",
-        dismissible: true,
-        timeout: 5000,
-        actions: [
-            {
-                label: "Ok",
-                type: "primary"
-            },
-            {
-                label: "Cancel",
-                type: "secondary"
-            }
-        ]
-    });
-    const emitWarning = () => $vuert.emit({
-        icon: "circle-exclamation",
-        title: "Warning",
-        message: "This is a warning message.",
-        type: "warning",
-        dismissible: true,
-        timeout: 5000,
-        actions: [
-            {
-                label: "Ok",
-                type: "primary"
-            },
-            {
-                label: "Cancel",
-                type: "secondary"
-            }
-        ]
-    });
-    const emitDanger = () => $vuert.emit({
-        icon: "circle-xmark",
-        title: "Danger",
-        message: "This is a danger message.",
-        type: "error",
-        dismissible: true,
-        timeout: 5000,
-        actions: [
-            {
-                label: "Ok",
-                type: "primary"
-            },
-            {
-                label: "Cancel",
-                type: "secondary"
-            }
-        ]
-    });
-</script>
+<script lang="ts" setup></script>
 
 <template>
     <div id="home-page" class="page">
-        <header>
-            <VueLogo />
-        </header>
-        <h1>Your Halloween Homework are ready to be done! 🚀</h1>
+        <h1 class="my-4">
+            🎃🦇🐈‍⬛🕷️🕸️👻
+        </h1>
+        <h2>Halloween Homework</h2>
+        <hr />
+        <p>
+            Vi ho preparato qualche esercizio per tenervi in allenamento durante la pausa di Halloween.
+            Spero siano stimolanti per tutti!
+        </p>
+        <p>
+            Io ho badato all'interfaccia e al suo funzionamento,
+            ma le logiche "core" di cosa dovrà essere fatto è tutta a vostro carico.<br />
+            Tutto quello che dovrete fare è aprire la directory <code>src/exercises</code> e
+            completare i file relativi ad ogni esercizio.
+        </p>
+        <p>
+            Ogni esercizio avrà una propria pagina, all'interno di questo sito e
+            raggiungibile tramite il menù di navigazione laterale, dove potrete testare il vostro codice.<br />
+            Inserite i valori di input laddove richiesti:
+            i dati verranno propagati automaticamente alle vostre funzioni e ricevuti come parametri.<br />
+            Se il prototipo della funzione richiederà di restituire un valore,
+            esso verrà automaticamente mostrato a schermo nell'apposita sezione.
+        </p>
+        <p>
+            Mi sembra superfluo dirlo ma preferisco speficarlo: il prototipo
+            della funzioni <b><u>NON</u></b> sono modificabili.<br />
+            Se sono presenti dei parametri, dovranno essere rispettati.
+            Lo stesso vale per un eventuale tipo di ritorno.
+        </p>
         <div>
-            <AppButton theme="success" @click="emitSuccess">
-                Success
-            </AppButton>
-            <AppButton theme="info" @click="emitInfo">
-                Informative
-            </AppButton>
-            <AppButton theme="warning" @click="emitWarning">
-                Warning
-            </AppButton>
-            <AppButton theme="danger" @click="emitDanger">
-                Danger
-            </AppButton>
+            <RouterLink class="btn btn-primary" :to="{ name: 'exercise-1' }">
+                Let's begin!
+            </RouterLink>
         </div>
     </div>
 </template>
@@ -113,6 +49,11 @@
         min-height: 100dvh;
         padding-top: var(--navigation-bar-height);
         text-align: center;
+
+        hr
+        {
+            width: 20rem;
+        }
 
         .btn
         {

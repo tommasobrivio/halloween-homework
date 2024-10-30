@@ -5,7 +5,7 @@
         <RouterLink :to="{ name: 'exercise-1' }" class="btn btn-light">
             [Esercizio 1] Calcolatrice
         </RouterLink>
-        <RouterLink :to="{ name: 'home' }" class="btn btn-light">
+        <!--RouterLink :to="{ name: 'home' }" class="btn btn-light">
             Esercizio 2
         </RouterLink>
         <RouterLink :to="{ name: 'home' }" class="btn btn-light">
@@ -16,7 +16,7 @@
         </RouterLink>
         <RouterLink :to="{ name: 'home' }" class="btn btn-light">
             Esercizio 5
-        </RouterLink>
+        </RouterLink-->
     </aside>
 </template>
 
@@ -33,8 +33,19 @@
 
         .btn-light
         {
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
             display: block;
             margin: 0.75em;
+            transition: background-color variables.$transition-duration variables.$transition-timing-function,
+                        border-color variables.$transition-duration variables.$transition-timing-function,
+                        box-shadow variables.$transition-duration variables.$transition-timing-function;
+
+            &.router-link-exact-active
+            {
+                background-color: #AFD7FF;
+                border-color: #77BBFF;
+                box-shadow: 0px 0px 0.5em 0px rgba(0, 127, 255, 0.5);
+            }
         }
     }
 </style>
