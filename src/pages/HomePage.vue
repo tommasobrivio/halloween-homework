@@ -27,7 +27,7 @@
         </p>
         <p>
             Mi sembra superfluo dirlo ma preferisco speficarlo: il prototipo
-            della funzioni <b><u>NON</u></b> sono modificabili.<br />
+            delle funzioni <b><u>NON</u></b> sono modificabili.<br />
             Se sono presenti dei parametri, dovranno essere rispettati.
             Lo stesso vale per un eventuale tipo di ritorno.
         </p>

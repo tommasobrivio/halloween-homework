@@ -5,6 +5,9 @@
         <RouterLink :to="{ name: 'exercise-1' }" class="btn btn-light">
             [Esercizio 1] Calcolatrice
         </RouterLink>
+        <RouterLink :to="{ name: 'exercise-2' }" class="btn btn-light">
+            [Esercizio 2] Combattimento a turni
+        </RouterLink>
         <!--RouterLink :to="{ name: 'home' }" class="btn btn-light">
             Esercizio 2
         </RouterLink>

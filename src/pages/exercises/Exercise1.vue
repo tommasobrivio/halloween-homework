@@ -282,24 +282,29 @@
 <template>
     <div id="exercise-1" class="container page">
         <h1>[Esercizio 1] Calcolatrice</h1>
+        <p>
+            Questo esercizio pone il suo focus sull'uso degli
+            <strong>operatori aritmetici</strong> e sul controllo di flusso <code>if</code>.<br />
+            Per risolvere questo esercizio, non ti servirà altro.
+        </p>
         <hr />
         <h2 class="my-4">
             Parte 1
         </h2>
+        <p>
+            Una semplice <strong>calcolatrice</strong>.<br />
+            Può eseguire le 4 operazioni principali tra due numeri:
+        </p>
+        <ul>
+            <li><strong>Addizione</strong></li>
+            <li><strong>Sottrazione</strong></li>
+            <li><strong>Moltiplicazione</strong></li>
+            <li><strong>Divisione</strong></li>
+        </ul>
+        <p>
+            Implementa e scrivi la funzione in grado di eseguire queste operazioni tra i numeri.
+        </p>
         <form class="inset-form" @submit.prevent="onSubmit1">
-            <p>
-                Una semplice <strong>calcolatrice</strong>.<br />
-                Può eseguire le 4 operazioni principali tra due numeri:
-            </p>
-            <ul>
-                <li><strong>Addizione</strong></li>
-                <li><strong>Sottrazione</strong></li>
-                <li><strong>Moltiplicazione</strong></li>
-                <li><strong>Divisione</strong></li>
-            </ul>
-            <p>
-                Implementa e scrivi la funzione in grado di eseguire queste operazioni tra i numeri.
-            </p>
             <div class="input-group">
                 <TextBox id="number-1"
                          v-model="number1"
@@ -350,13 +355,13 @@
         <h2 class="my-4">
             Parte 2
         </h2>
+        <p>
+            Questa versione della calcolatrice, utilizza
+            la <b><u>STESSA</u></b> funzione di calcolo della versione precedente.<br />
+            Verificando di non rompere quanto già fatto e testato,
+            aggiungi e gestisci il calcolo del <strong>resto</strong>.
+        </p>
         <form class="inset-form" @submit.prevent="onSubmit2">
-            <p>
-                Questa versione della calcolatrice, utilizza
-                la <b><u>STESSA</u></b> funzione di calcolo della versione precedente.<br />
-                Verificando di non rompere quanto già fatto e testato,
-                aggiungi e gestisci il calcolo del <strong>resto</strong>.
-            </p>
             <div class="input-group">
                 <TextBox id="number-1"
                          v-model="number3"
