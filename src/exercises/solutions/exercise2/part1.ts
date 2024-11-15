@@ -1,4 +1,4 @@
-import { rollDices } from "@/utils";
+/* import { rollDices } from "@/utils";
 
 export type Player = "player1" | "player2";
 
@@ -46,3 +46,4 @@ export function dealDamage(player: Player, damage: number): void
         throw new Error(`Invalid player: ${player}`);
     }
 }
+*/

@@ -3,10 +3,12 @@ import { rollDices } from "@/utils";
 export type Player = "player1" | "player2";
 
 const MaxLifePlayer1 = 49;
+let ALPlayer1 = MaxLifePlayer1;
 const ACPlayer1 = 9;
 
-const MaxLifePlayer2 = 37;
-const ACPlayer2 = 12;
+const MaxLifePlayer2 = 49;
+let ALPlayer2 = MaxLifePlayer2;
+const ACPlayer2 = 9;
 
 /**
  * ==== ESERCIZIO 1 ====
@@ -36,6 +38,17 @@ export function getLife(player: Player): number
      *  Il valore dovrà essere restituito in percentuale, compreso tra 0 e 100.
      *  Per esempio: se la vita attuale del giocatore è 10 e la vita massima è 50, il risultato dovrà essere 20.
      */
+
+    if (player === "player1")
+    {
+        return (ALPlayer1 / MaxLifePlayer1) * 100;
+    }
+
+    else
+    {
+        return (ALPlayer2 / MaxLifePlayer2) * 100;
+    }
+
 }
 
 export function dealDamage(player: Player, damage: number): void
@@ -90,4 +103,107 @@ export function dealDamage(player: Player, damage: number): void
      *
      * Gestisci anche queste casistiche all'interno di questa funzione.
      */
+
+    if (damage > 0)
+    {
+        const rollDice = rollDices(1, 20);
+
+        if (rollDice === 20)
+        {
+            damage *= 2;
+        }
+
+        if (player === "player1")
+        {
+            if (rollDice === 1)
+            {
+                if ((ALPlayer2 -= damage) > 0)
+                {
+                    ALPlayer2 -= damage;
+                }
+
+                else
+                {
+                    ALPlayer2 = 0;
+                }
+            }
+
+            if (rollDice >= ACPlayer1)
+            {
+                if ((ALPlayer1 -= damage) > 0)
+                {
+                    ALPlayer1 -= damage;
+                }
+
+                else
+                {
+                    ALPlayer1 = 0;
+                }
+            }
+        }
+
+        if (player === "player2")
+        {
+            if (rollDice === 1)
+            {
+                if ((ALPlayer1 -= damage) > 0)
+                {
+                    ALPlayer1 -= damage;
+                }
+
+                else
+                {
+                    ALPlayer1 = 0;
+                }
+            }
+
+            if (rollDice >= ACPlayer2)
+            {
+
+                if ((ALPlayer2 -= damage) > 0)
+                {
+                    ALPlayer2 -= damage;
+                }
+
+                else
+                {
+                    ALPlayer2 = 0;
+                }
+            }
+        }
+
+    }
+
+    if (damage < 0)
+    {
+        damage *= -1;
+
+        if (player === "player1")
+        {
+            if ((ALPlayer1 += damage) > MaxLifePlayer1)
+            {
+                ALPlayer1 += damage;
+            }
+
+            else
+            {
+                ALPlayer1 = MaxLifePlayer1;
+            }
+
+        }
+
+        if (player === "player2")
+        {
+            if ((ALPlayer2 += damage) > MaxLifePlayer2)
+            {
+                ALPlayer2 += damage;
+            }
+
+            else
+            {
+                ALPlayer2 = MaxLifePlayer2;
+            }
+
+        }
+    }
 }

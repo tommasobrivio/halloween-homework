@@ -1,6 +1,5 @@
 <script lang="ts" setup>
     import { Random } from "@byloth/core";
-    import type { MaybePromise } from "@byloth/core";
 
     import { computed, ref } from "vue";
 
