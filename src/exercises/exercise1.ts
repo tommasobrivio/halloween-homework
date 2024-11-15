@@ -30,4 +30,26 @@ export function computeOperation(num1: number, num2: number, operation: Operatio
      *
      * Happy coding! 🚀
      */
+
+    if (operation === "+")
+    {
+        return num1 + num2;
+    }
+    else if (operation === "-")
+    {
+        return num1 - num2;
+    }
+    else if (operation === "*")
+    {
+        return num1 * num2;
+    }
+    else if (operation === "/")
+    {
+        return num1 / num2;
+    }
+    else
+    {
+        return num1 % num2;
+    }
+
 }
